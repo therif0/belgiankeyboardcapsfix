@@ -1,0 +1,14 @@
+# Local-only docs and notes — not for upstream.
+briefing.md
+KDE-WAYLAND-INVESTIGATION.md
+
+# Stale prototype that doesn't match the current install approach.
+src/
+systemd/
+packaging/
+
+# Tooling / editor state.
+.claude/
+__pycache__/
+*.pyc
+.DS_Store
