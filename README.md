@@ -4,7 +4,7 @@
 
 ## The problem
 
-On a Belgian AZERTY layout, the keys with 2 levels (for example ù and %) and especially the digits row is on the *shifted* level: `&é"'(§è!çà` unshifted, `1234567890` shifted. To type a phone number, a date or a bank account, you hold Shift the whole time. On Windows, the behaviour lets you press **Caps Lock** and have the keys with two levels lock to the upper row while everything else stays normal. I never found a fix that worked right, so I did one myself with Claude Code (Vibecoding)
+On a Belgian AZERTY layout, the keys with 2 levels (for example ù and %) and especially the digits row is on the *shifted* level: `&é"'(§è!çà` unshifted, `1234567890` shifted. To type a phone number, a date or a bank account, you hold Shift the whole time. On Windows, the behaviour lets you press **Caps Lock** and have the keys with two levels lock to the upper row while everything else stays normal. I never found a fix that worked right, so I did one myself with Claude Code (Vibecoding mostly documentation and inline code comments and most of the repetitive work)
 
 The 2 existing Linux workarounds I found were bad:
 
