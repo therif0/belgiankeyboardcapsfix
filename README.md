@@ -4,26 +4,22 @@
 
 ## The problem
 
-On a Belgian AZERTY layout, the digits row is on the *shifted* level: `&é"'(§è!çà` unshifted, `1234567890` shifted. To type a phone number, a date or a bank account, you hold Shift the whole time.
+On a Belgian AZERTY layout, the keys with 2 levels (for example ù and %) and especially the digits row is on the *shifted* level: `&é"'(§è!çà` unshifted, `1234567890` shifted. To type a phone number, a date or a bank account, you hold Shift the whole time. On Windows, the behaviour lets you press **Caps Lock** and have the keys with two levels lock to the upper row while everything else stays normal. I never found a fix that worked right, so I did one myself with Claude Code (Vibecoding)
 
-Windows lets you press **Caps Lock** and have the digits row lock to `1234567890` while everything else stays normal. Linux never has — for two decades.
+The 2 existing Linux workarounds I found were bad:
 
-The two existing Linux workarounds are bad:
-
-- **"Shift Lock"** in GNOME Tweaks simulates a held Shift key. Side effect: Caps + click in LibreOffice Calc fires range-multiselect, Caps + drag in Dolphin selects files. Anyone who does spreadsheet work has cursed it.
+- **"Shift Lock"** in GNOME Tweaks simulates a held Shift key. Side effect: Caps + click in LibreOffice Calc fires range-multiselect, Caps + drag in Dolphin selects files. Anyone who does office work has cursed it.
 - **`caps:digits_row_independent_lock`** (the upstream XKB option, "Shift + Caps locks the digits…") needs Shift+Caps, not Caps alone — and on current Plasma 6.x it doesn't even work: the compiled keymap leaves Caps bound to a modifier it can't reach.
 
 ## The fix
 
-This tool patches `/usr/share/X11/xkb/symbols/be` so the **Belgian (alt.)** variant uses a key type that flips its level when Caps Lock is held, and rewires Caps Lock itself to atomically lock the correct modifiers.
+This tool patches `/usr/share/X11/xkb/symbols/be` so the **Belgian (alt.)** variant uses a key type that flips its level when Caps Lock is toggled, and rewires Caps Lock itself to atomically lock the correct modifiers.
 
 Press Caps Lock alone:
 
 | Without fix | With fix |
 |-------------|----------|
-| `&é"'(§è!çà` | `1234567890` |
-| LED stays off | LED lights |
-| Letters lowercase (Caps doesn't engage) | Letters capitalize, like a normal Caps Lock |
+| `&É"'(` | `12345` |
 | Shift + click does multiselect | Shift is untouched — no side effects |
 
 KDE System Settings → Keyboard → Layouts will show the variant as **"Belgian (alt.) — digit-lock Caps"** so you can tell at a glance the fix is applied:
