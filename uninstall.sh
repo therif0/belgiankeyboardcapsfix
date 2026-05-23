@@ -5,7 +5,7 @@
 # install.sh and asks kwin to reload its keyboard config.
 #
 # Requires root; the script re-execs itself under sudo if needed.
-# Basics laid by Yahya (Myself) and vibecoded notes/inline documentation
+# Basics laid by therif0 (Myself) and vibecoded notes/inline documentation
 # and repetitive work
 
 set -euo pipefail

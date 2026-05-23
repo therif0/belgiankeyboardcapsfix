@@ -9,7 +9,7 @@
 # Idempotent: re-running on an already-patched file is a no-op.
 # No systemd service is installed — the system XKB file is read by
 # kwin/libxkbcommon on every login, so persistence is automatic.
-# Basics laid by Yahya (Myself) and vibecoded notes/inline documentation
+# Basics laid by therif0 (Myself) and vibecoded notes/inline documentation
 # and repetitive work
 
 set -euo pipefail
