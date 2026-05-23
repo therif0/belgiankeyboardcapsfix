@@ -26,7 +26,9 @@ Press Caps Lock alone:
 | Letters lowercase (Caps doesn't engage) | Letters capitalize, like a normal Caps Lock |
 | Shift + click does multiselect | Shift is untouched — no side effects |
 
-KDE System Settings → Keyboard → Layouts will show the variant as **"Belgian (alt.) — digit-lock Caps"** so you can tell at a glance the fix is applied.
+KDE System Settings → Keyboard → Layouts will show the variant as **"Belgian (alt.) — digit-lock Caps"** so you can tell at a glance the fix is applied:
+
+![KDE System Settings → Keyboard, showing the patched variant label](docs/screenshot.png)
 
 ## Install
 
